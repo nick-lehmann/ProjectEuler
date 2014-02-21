@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # my own module with some functions for solving mathematical problems
 
+from math import sqrt
+
 # finds the highest prime factor of the argument in a recursive way
 def highest_prime(n):
     i = 2
@@ -11,12 +13,14 @@ def highest_prime(n):
     else:
         return n
 
+
 # checks argument for being a palindrom
 def palindrom(n):
     if str(n) == str(n)[::-1]:
         return True
     else:
         return False
+
 
 # Checks whether arg is a prime or not
 def prime(n):
@@ -40,3 +44,18 @@ def prime(n):
             return False
 
     return True
+
+
+# return list of proper divisors of num
+def proper_divisor(num):
+    max = sqrt(num)
+    pdivisor = [1]
+    for x in range(2, int(max)+1):
+        if num % x == 0:
+            pdivisor.append(x)
+            if x != num/x:
+                pdivisor.append(num/x)
+    return pdivisor
+
+def sum_proper_divisor(num):
+    return sum(proper_divisor(num))
