@@ -10,3 +10,10 @@ def highest_prime(n):
         return highest_prime(n/i)
     else:
         return n
+
+# checks argument for being a palindrom
+def palindrom(n):
+    if str(n) == str(n)[::-1]:
+        return True
+    else:
+        return False
