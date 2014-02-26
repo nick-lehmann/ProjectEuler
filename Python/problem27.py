@@ -15,23 +15,6 @@ def prime_length(a, b):
     return length
 
 def main():
-    # print prime_length(1, 41)
-
-    # primes = create_prime_list(0, 1000)
-    # highest = 0
-    # best_a = 0
-    # best_b = 0
-
-    # for b in xrange(-1000, 1001):
-    #     print b
-    #     for a in xrange(-100, 1001):
-    #         cur = prime_length(a,b)
-    #         if cur > highest:
-    #             highest = cur
-    #             best_a = a
-    #             best_b = b
-    #             # print str(cur) + " --> " + str(a) + " : " + str(b)
-
     highest = 0
     best_a = 0
     best_b = 0
