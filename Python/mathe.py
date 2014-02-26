@@ -46,6 +46,16 @@ def prime(n):
     return True
 
 
+# create list of primes 
+def create_prime_list(min, max):
+    primes = []
+    for x in xrange(min, max+1):
+        if prime(x):
+            primes.append(x)
+
+    return primes
+
+
 # return list of proper divisors of num
 def proper_divisor(num):
     max = sqrt(num)
